@@ -8,6 +8,6 @@ encoder: encoder.c block.c
 
 encoder_tests: encoder encoder_tests.c
 	gcc -Wall -c encoder_tests.c -Icgreen/include
-	gcc encoder_tests.o -lcgreen -lm -o encoder_tests
+	gcc encoder_tests.o block.o -lcgreen -lm -o encoder_tests
 
 

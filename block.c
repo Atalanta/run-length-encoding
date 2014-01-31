@@ -11,8 +11,9 @@ void free_block(block_t *block) {
     free(block);
 }
 
-void append_character(block_t *block, char byte) {
-	block->buffer = realloc(block->buffer, sizeof(char));
+block_t *append_character(block_t *block, char byte) {
+	block->buffer = realloc(block->buffer, (block->size + 1)*sizeof(char));
 	block->buffer[block->size] = byte;
 	block->size++;
+	return block;
 }

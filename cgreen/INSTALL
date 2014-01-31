@@ -1,0 +1,83 @@
+Building and Installing Cgreen
+==============================
+
+This document is incomplete. ??? are placeholders.
+
+There are several ways to use Cgreen:
+
+1) You want to write some tests for a personal project, but don't need to ship
+   the test suite with the product, or you just want to try out CGreen.
+2) You want to write some tests that will be used by other developers. This
+   is the normal way to use Cgreen.
+3) You want to ship working tests with a product and want to bundle Cgreen
+   as the test runner.
+4) You are pulling Cgreen directly from subversion on Sourceforge:
+   https://cgreen.svn.sourceforge.net/svnroot/cgreen/trunk/cgreen
+
+We'll walk you through these in order...
+
+1) So you want to write a test quickly.
+
+As a user wanting to write some quick tests, the quickest way is to
+download the prebuilt binaries for your platform. Just install the
+files in some private tree.
+
+You will see a cgreen.h and both a cgreen shared object or DLL, and a
+static library for your system.
+
+Include the header and link the library as you normally would.
+
+2) Cgreen needs to be installed to be usable by everyone.
+
+This is the same as scenario 1, but install the files in a public
+/usr/local (or equivalent). The Cgreen header should just be available
+through...
+
+#include <cgreen.h>
+
+...and adding -lcgreen should be enough to link under gcc.
+
+3) ???
+
+4) You will have to carry out some additional steps if you work straight off
+of a Subversion checkout.
+
+We are using the CMake (www.cmake.org) build system. The following
+steps are called "out-of-source building", because we will build all
+the project files outside of the sources directory to completely
+retain the original source tree.
+
+Assuming you have the checked out cgreen sources into a subdirectory
+"cgreen" in the current directory we want to create a build directory
+parallel to the source directory. (Actually you can create the build
+directory almost anywhere, just use the path to the top source
+directory instead of "../cmake" in the following.)
+
+First the build directory:
+    $ mkdir cgreen-build
+    $ cd cgreen-build
+Within this new directory, we let cmake configure the Makefiles
+    $ cmake ../cgreen
+We then get the following make targets:
+    $ make
+    $ make test
+    $ make install
+
+You also have some options
+- build with static libraries
+- build HTML or PDF documentation
+
+To enable any of these use the cmake graphical user interface (CMakeSetup
+on Windows or ccmake on UNIX) to turn these options on or off.
+
+Note on CYGWIN: Cygwin is not a WIN32 platform, but it is a
+DLL-platform where libraries normally goes in the bin directory. I
+have yet to convince CMake to handle this automatically, so to make
+the above work you have two choices:
+
+1) install before running the tests and also set PATH to include
+"/usr/local/lib"
+
+2) setting the PATH to include the build directory where the libraries are
+
+/Thomas 2012-08-20

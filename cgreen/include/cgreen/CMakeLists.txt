@@ -1,0 +1,33 @@
+project(cgreen-headers C)
+
+set(cgreen_HDRS
+  assertions.h
+  breadcrumb.h
+  cdash_reporter.h
+  cgreen.h
+  constraint.h
+  constraint_syntax_helpers.h
+  cpp_assertions.h
+  cpp_constraint.h
+  cute_reporter.h
+  memory.h
+  mocks.h
+  string_comparison.h
+  reporter.h
+  runner.h
+  suite.h
+  text_reporter.h
+  unit.h
+  vector.h
+)
+
+install(
+  FILES
+    ${cgreen_HDRS}
+  DESTINATION
+    ${INCLUDE_INSTALL_DIR}/${APPLICATION_NAME}
+  COMPONENT
+    headers
+)
+
+add_subdirectory(internal)

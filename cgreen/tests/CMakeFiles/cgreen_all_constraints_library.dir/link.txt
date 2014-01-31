@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC    -shared -Wl,-soname,libcgreen_all_constraints_library.so -o libcgreen_all_constraints_library.so CMakeFiles/cgreen_all_constraints_library.dir/all_constraints_printout.c.o ../src/libcgreen.so.1.0.0 -lpthread -lm -Wl,-rpath,/home/sns/src/run-length-encoding/cgreen/src 

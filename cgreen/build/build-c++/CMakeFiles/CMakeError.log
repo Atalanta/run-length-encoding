@@ -1,0 +1,76 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec94749231/fast"
+gmake[2]: Entering directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec94749231.dir/build.make CMakeFiles/cmTryCompileExec94749231.dir/build
+gmake[3]: Entering directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec94749231.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec94749231.dir/CheckSymbolExists.c.o   -c /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec94749231
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec94749231.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec94749231.dir/CheckSymbolExists.c.o  -o cmTryCompileExec94749231 -rdynamic 
+CMakeFiles/cmTryCompileExec94749231.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+gmake[3]: Leaving directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+gmake[3]: *** [cmTryCompileExec94749231] Error 1
+gmake[2]: *** [cmTryCompileExec94749231/fast] Error 2
+gmake[2]: Leaving directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+
+File /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/gmake "cmTryCompileExec1976473854/fast"
+gmake[2]: Entering directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1976473854.dir/build.make CMakeFiles/cmTryCompileExec1976473854.dir/build
+gmake[3]: Entering directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1976473854.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1976473854.dir/CheckFunctionExists.c.o   -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1976473854
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1976473854.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1976473854.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1976473854 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[3]: *** [cmTryCompileExec1976473854] Error 1
+gmake[3]: Leaving directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+gmake[2]: Leaving directory `/home/sns/src/cgreen-code/cgreen/build/build-c++/CMakeFiles/CMakeTmp'
+gmake[2]: *** [cmTryCompileExec1976473854/fast] Error 2
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
+Build flags: 
+Id flags: -c
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":

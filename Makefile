@@ -9,7 +9,7 @@ encoder: encoder.o block.o
 
 encoder_tests: encoder encoder_tests.c
 	gcc -Wall -c encoder_tests.c -Icgreen/include
-	gcc encoder_tests.o block.o -lcgreen -lm -o encoder_tests
+	gcc encoder_tests.o block.o cgreen/src/libcgreen.a -lm -o encoder_tests
 
 .PHONY: clean
 clean:

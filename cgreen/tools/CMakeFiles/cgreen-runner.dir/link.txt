@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/cgreen-runner.dir/cgreen-runner.c.o CMakeFiles/cgreen-runner.dir/gopt.c.o CMakeFiles/cgreen-runner.dir/xml_reporter.c.o CMakeFiles/cgreen-runner.dir/runner.c.o  -o cgreen-runner -rdynamic ../src/libcgreen.so.1.0.0 -ldl -lpthread -lm -Wl,-rpath,/home/sns/src/run-length-encoding/cgreen/src: 

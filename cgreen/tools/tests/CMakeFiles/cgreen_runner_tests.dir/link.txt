@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC    -shared -Wl,-soname,libcgreen_runner_tests.so -o libcgreen_runner_tests.so CMakeFiles/cgreen_runner_tests.dir/runnerTests.c.o ../../src/libcgreen.so.1.0.0 -ldl -lpthread -lm -Wl,-rpath,/home/sns/src/run-length-encoding/cgreen/src 

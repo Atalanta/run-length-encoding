@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC    -shared -Wl,-soname,libcgreen_api.so -o libcgreen_api.so CMakeFiles/cgreen_api.dir/core_api.c.o CMakeFiles/cgreen_api.dir/no_context_api.c.o CMakeFiles/cgreen_api.dir/context_api.c.o ../../src/libcgreen.so.1.0.0 -lpthread -lm -Wl,-rpath,/home/sns/src/run-length-encoding/cgreen/src 

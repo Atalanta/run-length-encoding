@@ -13,22 +13,18 @@ int main(int argc, char **argv) {
 }
 
 block_t *slurp(void) {
-
     block_t *block = create_block();
     char byte;
-    while((byte=getchar()) != EOF) {
-
-        block->buffer = realloc(block->buffer, sizeof(char));
-        block->buffer[block->size] = byte;
-        block->size++;
-    }
+    while((byte = getchar()) != EOF) {
+		append_character(block, byte);
+	}
     return block;
 }
 
 void verbatim(int size, char *buffer) {
     int i;
     printf("%d:", size);
-    for(i=0; i < size; i++) {
+    for(i = 0; i < size; i++) {
       printf("%c", buffer[i]);
     };
 }

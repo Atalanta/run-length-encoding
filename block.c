@@ -10,3 +10,9 @@ block_t *create_block(void) {
 void free_block(block_t *block) {
     free(block);
 }
+
+void append_character(block_t *block, char byte) {
+	block->buffer = realloc(block->buffer, sizeof(char));
+	block->buffer[block->size] = byte;
+	block->size++;
+}
